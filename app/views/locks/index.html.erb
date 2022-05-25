@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Locks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lock name</th>
+      <th>Key</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @locks.each do |lock| %>
+      <tr>
+        <td><%= lock.lock_name %></td>
+        <td><%= lock.key_id %></td>
+        <td><%= link_to 'Show', lock %></td>
+        <td><%= link_to 'Edit', edit_lock_path(lock) %></td>
+        <td><%= link_to 'Destroy', lock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lock', new_lock_path %>

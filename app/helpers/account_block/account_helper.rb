@@ -1,0 +1,2 @@
+module AccountBlock::AccountHelper
+end
